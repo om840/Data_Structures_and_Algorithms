@@ -1,0 +1,145 @@
+
+/*
+    KINDLY NOTE THAT IN SINGLY LINKED LIST WE CAN PERFORM INSERTION,DELETION AT THE BEGENING OF THE LINKED LIST
+    AND AT THE END OF THE LINKED LIST.
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+struct node{
+
+    int data;
+    struct node *next;
+
+};
+
+void main(){
+
+    int i,search,count=1;
+    struct node *start,*new_node,*temp,*ptr,*sec_node,*last_node,*todelete;
+
+    temp = (struct node*)malloc(sizeof(struct node));
+    scanf("%d",&temp->data);
+    temp->next = NULL;
+    start = temp;
+
+    for(i=1;i<5;i++){
+
+         new_node = (struct node*)malloc(sizeof(struct node));
+         scanf("%d",&new_node->data);
+         temp->next = new_node;
+         new_node->next = NULL;
+         temp = new_node;
+
+    }
+
+    // INSERT NODE AT THE BEGINING OF SINGLY LINKED LIST
+    /*
+    printf("Enter the data you want to enter the begining of the list");
+
+    sec_node = (struct node*)malloc(sizeof(struct node));
+    scanf("%d",&sec_node->data)
+    sec_node->next = start;
+    start = sec_node;
+    */
+
+
+    //INSERT NODE AT END OF THE LINKED LIST
+  /*
+     -------           --------
+    | 10  |  | --->   | 20  |  |-----
+     -------           --------     |
+                                    |
+  |----------------------------------
+  |    -------           --------
+   -> | 30  | | --->   | 20  | X |
+       -------           --------
+
+
+     printf("Enter the data you want to enter the last of the list");
+
+    last_node = (struct node*)malloc(sizeof(struct node));
+    scanf("%d",&last_node->data);
+
+     temp = start;
+
+     while(temp->next != NULL){
+
+        temp = temp->next;
+     }
+
+    last_node->next = NULL;
+    temp->next = last_node;
+
+    temp = last_node;
+*/
+
+    //DELETE THE NODE FROM BEGINING OF SINGLY LINKED LIST
+
+/*
+    todelete  = start;
+    start = start->next;
+
+    free(todelete);
+
+*/
+
+
+    //DELETE NODE FROM THE END OF THE LINKED LIST
+/*
+    ptr = temp = start;
+
+    while(ptr->next != NULL){
+
+        temp = ptr;
+
+        ptr = ptr->next;
+
+    }
+
+    temp->next = NULL;
+    free(ptr);
+
+*/
+
+    //SEARCH THE DATA FROM THE LINKED LIST
+
+/*
+    printf("Enter the Data you Want to Search:");
+    scanf("\n%d",&search);
+
+    ptr =  start;
+
+    while(ptr->data != search){
+
+        ptr =  ptr->next;
+        count++;
+
+    }
+
+    if(count==1){
+
+        printf("Not Found");
+    }
+    else{
+
+        printf("Found at %d position",count);
+    }
+*/
+
+
+/*Display The LINKED LIST*/
+
+
+    ptr = start;
+    while(ptr != NULL){
+
+        printf("\n%d",ptr->data);
+        ptr =ptr->next;
+
+    }
+
+}
